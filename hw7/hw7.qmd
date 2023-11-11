@@ -419,7 +419,7 @@ sql = f"""
 
 
 SELECT 
-    p.people_last_name, p,people_first_name, s.name 
+    p.people_last_name, p.people_first_name, s.name 
 FROM
     people p
 JOIN

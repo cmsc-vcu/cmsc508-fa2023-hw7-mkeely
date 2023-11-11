@@ -3443,7 +3443,7 @@ z-index: 1000;
 <p>The <em>people</em> table contains elements that describe the employees at the company. It gives insight into personal information such as first name and last name. It includes contact information via an email, and social media information for Linkedin and Discord. You can view the employee with a link to their headshot, and learn more about them with the brief bio and date joined fields.</p>
 <p>Below is a list of data in the <em>people</em> table.</p>
 <div class="cell" data-execution_count="5">
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="21">
 <div>
 
 
@@ -3595,7 +3595,7 @@ z-index: 1000;
 <p>The <em>skills</em> table contains elements that describe the many talents across the company. It contains the name of the skill, a short description of what the skill entails, and the time commitment that comes with obtaining the skill. Skills are categorized by tags. You can find out more about a skill by visiting its URL.</p>
 <p>Below is a list of data in the <em>skills</em> table.</p>
 <div class="cell" data-execution_count="6">
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="22">
 <div>
 
 
@@ -3696,7 +3696,7 @@ z-index: 1000;
 <p>The <em>roles</em> table contains elements that describe different roles within the company. Each role is identified by a unique ID, and also contains a sort ID.</p>
 <p>Below is a list of data in the <em>roles</em> table.</p>
 <div class="cell" data-execution_count="7">
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="23">
 <div>
 
 
@@ -3760,7 +3760,7 @@ z-index: 1000;
 <section id="list-skill-names-tags-and-descriptions-ordered-by-name" class="level1">
 <h1>List skill names, tags, and descriptions ordered by name</h1>
 <div class="cell" data-execution_count="8">
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="24">
 <div>
 
 
@@ -3831,7 +3831,7 @@ z-index: 1000;
 <section id="list-people-names-and-email-addresses-ordered-by-last_name" class="level3">
 <h3 class="anchored" data-anchor-id="list-people-names-and-email-addresses-ordered-by-last_name">List people names and email addresses ordered by last_name</h3>
 <div class="cell" data-execution_count="9">
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="25">
 <div>
 
 
@@ -3915,7 +3915,7 @@ z-index: 1000;
 <section id="list-skill-names-of-person-1" class="level3">
 <h3 class="anchored" data-anchor-id="list-skill-names-of-person-1">List skill names of Person 1</h3>
 <div class="cell" data-execution_count="10">
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="26">
 <div>
 
 
@@ -3949,7 +3949,7 @@ z-index: 1000;
 <section id="list-people-names-with-skill-6" class="level3">
 <h3 class="anchored" data-anchor-id="list-people-names-with-skill-6">List people names with Skill 6</h3>
 <div class="cell" data-execution_count="11">
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="27">
 <div>
 
 
@@ -3997,7 +3997,7 @@ z-index: 1000;
 <section id="list-people-with-a-developer-role" class="level3">
 <h3 class="anchored" data-anchor-id="list-people-with-a-developer-role">List people with a DEVELOPER role</h3>
 <div class="cell" data-execution_count="12">
-<div class="cell-output cell-output-display" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="28">
 <div>
 
 
@@ -4045,7 +4045,7 @@ z-index: 1000;
 <section id="list-names-and-email-addresses-of-people-without-skills" class="level3">
 <h3 class="anchored" data-anchor-id="list-names-and-email-addresses-of-people-without-skills">List names and email addresses of people without skills</h3>
 <div class="cell" data-execution_count="13">
-<div class="cell-output cell-output-display" data-execution_count="13">
+<div class="cell-output cell-output-display" data-execution_count="29">
 <div>
 
 
@@ -4073,7 +4073,7 @@ z-index: 1000;
 <section id="list-names-and-tags-of-unused-skills" class="level3">
 <h3 class="anchored" data-anchor-id="list-names-and-tags-of-unused-skills">List names and tags of unused skills</h3>
 <div class="cell" data-execution_count="14">
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="30">
 <div>
 
 
@@ -4106,33 +4106,7 @@ z-index: 1000;
 <section id="list-people-names-and-skill-names-with-the-boss-role" class="level3">
 <h3 class="anchored" data-anchor-id="list-people-names-and-skill-names-with-the-boss-role">List people names and skill names with the BOSS role</h3>
 <div class="cell" data-execution_count="15">
-<div class="cell-output cell-output-stdout">
-<pre><code>An error occurred:
-
-(pymysql.err.OperationalError) (1054, &quot;Unknown column &#39;p&#39; in &#39;field list&#39;&quot;)
-[SQL: 
-
-
-SELECT 
-    p.people_last_name, p,people_first_name, s.name 
-FROM
-    people p
-JOIN
-    peopleroles pr ON (p.people_id = pr.people_id)
-JOIN
-    roles r ON (pr.role_id = r.role_id)
-LEFT JOIN
-    peopleskills ps ON p.people_id = ps.people_id
-LEFT JOIN
-    skills s ON ps.skills_id = s.id
-WHERE
-    r.role_id = 5;
-]
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
-
-Ignoring and moving on.</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="31">
 <div>
 
 
@@ -4140,9 +4114,30 @@ Ignoring and moving on.</code></pre>
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">people_last_name</th>
+<th data-quarto-table-cell-role="th">people_first_name</th>
+<th data-quarto-table-cell-role="th">name</th>
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Person 2</td>
+<td>Louisa</td>
+<td>Fixing Cars</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Person 2</td>
+<td>Louisa</td>
+<td>Coding With Python</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Person 2</td>
+<td>Louisa</td>
+<td>Competitive Eating</td>
+</tr>
 </tbody>
 </table>
 
@@ -4153,7 +4148,7 @@ Ignoring and moving on.</code></pre>
 <section id="list-ids-and-names-of-unused-roles" class="level3">
 <h3 class="anchored" data-anchor-id="list-ids-and-names-of-unused-roles">List ids and names of unused roles</h3>
 <div class="cell" data-execution_count="16">
-<div class="cell-output cell-output-display" data-execution_count="16">
+<div class="cell-output cell-output-display" data-execution_count="32">
 <div>
 
 
