@@ -110,8 +110,6 @@ SELECT * from people
 -- Assuming you have a linking table named person_skills with columns person_id and skill_id
 -- You can adjust the table and column names based on your actual database schema.
 
-SELECT * from people
-
 # Section 6
 # Create peopleskills(id, skills_id, people_id, date_acquired)
 # None of the fields can ba NULL. ID can be auto_increment.
