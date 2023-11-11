@@ -483,5 +483,5 @@ df
 
 ## Reflection
 
-(Write a paragraph expressing your thoughts, feelings, and insights about your experience with this assignment.  Pause and breath before writing - I'm trying to encourage critical thinking and self-awareness while allowing you to explore the connections between theory and practice. And yes, delete this paragraph.)
 
+I feel like I gained a lot of experience with SQL and database design completed the first part of the assignment (the ddl part). It reiterated SQL commands that I was assessed on in the previous quiz, so it was good to see those commands I studied in practice. The SQL queries, however, added an additional layer of complexity that required more of me than the ddl file. As a whole, it was interesting to see what a database can represent and manipulate, which overall increased my confidence and experience with databases. 
