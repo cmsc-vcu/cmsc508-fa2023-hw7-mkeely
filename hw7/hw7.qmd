@@ -96,7 +96,7 @@ The project was assigned by the sensei who has hopes of creating a company-wide 
 
 ## Crows-foot diagram
 
-(add a description of the diagram and what the reader is seeing.)
+This Crows-foot diagram highlights the three major entities in this database - the people, their roles, and their skills. It also demonstrates the relationship between people and skills, which is a many-to-many relationship, as well as people and skills, which is also a many-to-many relationship. Employees can have zero or more skills, and skills do not necessarily have to be mastered by any of the employees. Employees must have at least one role, and each role has to be occupied by at least one employee. 
 
 ```{mermaid}
 erDiagram
